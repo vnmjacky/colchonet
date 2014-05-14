@@ -3,12 +3,15 @@ class User < ActiveRecord::Base
   
   #Validations
   validates_presence_of :email, :full_name, :location, :password
-  validates_confirmation_of :password
+  #validates_confirmation_of :password
   validates_length_of :bio, minimum: 30, allow_blank: false
+  validates_format_of :email, with: EMAIL_REGEXP
   validates_uniqueness_of :email
   # validates_format_of :email, with: EMAIL_REGEXP
   
-  validate :email_format
+  #validate :email_format
+
+  has_secure_password
 
   private
 
