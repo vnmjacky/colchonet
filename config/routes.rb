@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :rooms, :users
+
+  scope "(:locale)", locale: /en|pt/ do
+    resources :rooms, :users
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get '/:locale' => 'home#index', locale: /en|pt/
   # You can have the root of your site routed with "root"
   root 'home#index'
 
