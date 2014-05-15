@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|pt/ do
     resources :rooms, :users
+    resource :confirmation, only: [:show]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

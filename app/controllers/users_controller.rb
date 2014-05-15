@@ -11,9 +11,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      Signup.confirm_email(@user).deliver
+
       redirect_to @user, notice: 'Cadastro criado com sucesso!'
     else
-      render action: :new
+      render :new
     end
   end
 
@@ -28,7 +30,7 @@ class UsersController < ApplicationController
       redirect_to @user,
                   notice: 'Cadastro atualizado com sucesso!'
     else
-      render action: :edit
+      render :edit
     end
 
   end
