@@ -2,6 +2,10 @@ pt:
   flash:
     notice:
       signed_in: Usuário autenticado com sucesso!
+      signed_out: Logout efetuado com sucesso!
+      already_logged_in: Você já está logado!
+    alert:
+      needs_login: Usuário precisa estar autenticado para acessar esta página
   confirmations:
     success: Email confirmado com sucesso, obrigado!
   users:
@@ -35,8 +39,12 @@ pt:
   links:
     back: Voltar
   layout:
+    new_room: Novo quarto
     rooms: Quartos
+    signin: Login
     signup: Cadastro
+    my_profile: Meu perfil
+    signout: Logout
   general:
     form_error: Há erros no formulário, por favor verifique.
   activerecord:
