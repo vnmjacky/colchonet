@@ -5,13 +5,10 @@ class Signup < ActionMailer::Base
     @user = user
     # Link temporário pois a funcionalidade ainda
     # não existe, vamos criar ainda neste capítulo
-    @confirmation_link = root_url
-    mail({
-             to: user.email,
-             bcc: ['sign ups <signups@colcho.net>'],
-             subject: I18n.t('signup.confirm_email.subject')
-         })
-  end
+    @confirmation_link = confirmation_url({token: @user.confirmation_token})
 
+    mail to: user.email, bcc: ['sign ups <signups@colcho.net>'], subject: I18n.t('signup.confirm_email.subject')
+
+  end
 
 end

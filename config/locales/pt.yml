@@ -1,4 +1,9 @@
 pt:
+  flash:
+    notice:
+      signed_in: Usuário autenticado com sucesso!
+  confirmations:
+    success: Email confirmado com sucesso, obrigado!
   users:
     new:
       title: Cadastro
@@ -9,6 +14,10 @@ pt:
       edit: 'Editar perfil'
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+  user_sessions:
+    new:
+      title: Login
+      sugn_up: Cadastre-se
   rooms:
     new:
       title: Novo quarto
@@ -46,3 +55,18 @@ pt:
         description: Descrição
         location: Localização
         title: Título
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      models:
+        user_session:
+          attributes:
+            base:
+              invalid_login: Usuário ou senha inválidos
+  helpers:
+    submit:
+      user_session:
+        create: Entrar
