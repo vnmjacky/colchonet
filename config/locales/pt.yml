@@ -4,6 +4,9 @@ pt:
       signed_in: Usuário autenticado com sucesso!
       signed_out: Logout efetuado com sucesso!
       already_logged_in: Você já está logado!
+      room_created: Quarto criado com sucesso!
+      room_updated: Quarto atualizado com sucesso!
+      room_destroyed: Quarto removido com sucesso!
     alert:
       needs_login: Usuário precisa estar autenticado para acessar esta página
   confirmations:
