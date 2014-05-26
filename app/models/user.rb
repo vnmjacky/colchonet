@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
+  #Relations
+  has_many :rooms
+
   #Scopes
   scope :confirmed, -> { where.not(confirmed_at: nil)}
   

@@ -11,6 +11,8 @@ pt:
       needs_login: Usuário precisa estar autenticado para acessar esta página
   confirmations:
     success: Email confirmado com sucesso, obrigado!
+  dialogs:
+    destroy: Você tem certeza que quer remover?
   users:
     new:
       title: Cadastro
@@ -28,6 +30,13 @@ pt:
   rooms:
     new:
       title: Novo quarto
+  rooms:
+    index:
+      title: Quartos disponíveis
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
   signup:
     confirm_email:
       subject: 'Colcho.net - Confirme seu email'
